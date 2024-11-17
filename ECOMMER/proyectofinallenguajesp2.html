@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+     
+     <link rel="stylesheet" href="proyectofinallenguajes.css">
+     <link rel="shortcut icon" href="img/icono delta aeroline.jpeg" type="image/x-icon">
+ 
+     <title>DELTA AEROLINE - CARRITO </title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand-blue" href="proyectofinallenguajes.html">Delta</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        <div class="container-fluid my-1">
+            <a href="proyectofinallenguajes.html" class="navbar-brand" style="margin-left: 70px;">
+                <img src="img/icono delta aeroline.jpeg" alt="" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" 
+            aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent2" style="margin-right: 100px;">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a href="#intro" class="nav-link text-blue">Paquetes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="vuelos" class="nav-link text-blue">Vuelos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="hoteles" class="nav-link text-blue">Hoteles</a>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+      <section id="hogar" class="tex-center">
+        <div class="card-group">
+            <div class="card m-5 justify-content-center align-items-center">
+              <img src="/img/paquete cancun.jpeg" class="card-img-top img-fluid" alt="producto 1">
+              <div class="card-body">
+                <h5 class="card-title" id="">Paquete Cancun</h5>
+                <p class="card-text">Paquete por persona, incluye vuelo y hotel, con una duración de 3 dias, 2 noches.</p>
+                <p class="card-text" id="precio"><small class="text-body-secondary">$800000</small></p>
+                <button class="btn btn-primary" onclick="agregarAlCarrito('Paquete cancun', 800000)">Agregar al Carrito</button>
+              </div>
+            </div>
+            <div class="card m-5 justify-content-center align-items-center">
+              <img src="/img/paquete san andres.jpeg" class="card-img-top img-fluid" alt="producto 2">
+              <div class="card-body">
+                <h5 class="card-title" id="">Paquete San Andres</h5>
+                <p class="card-text">Paquete premium por persona, todo incluido, desayuno, almuerzo y cena, bar abierto con una duración de 5 dias, 4 noches.</p>
+                <p class="card-text "><small class="text-body-secondary">$1759000</small></p>
+                <button class="btn btn-primary" onclick="agregarAlCarrito('Paquete San Andres', 1759000)">Agregar al Carrito</button>
+              </div>
+            </div>
+            <div class="card m-5 justify-content-center align-items-center">
+              <img src="/img/plan eje cafetero.jpeg" class="card-img-top img-fluid" alt="producto 3">
+              <div class="card-body">
+                <h5 class="card-title" id="">Plan Eje Cafetero</h5>
+                <p class="card-text">Pasa dia todo incluido</p>
+                <p class="card-text"><small class="text-body-secondary">$185000</small></p>
+                <button class="btn btn-primary" onclick="agregarAlCarrito('Plan Eje Cafetero', 185000)">Agregar al Carrito</button>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <!-- SECCION HOTELES -->
+      <section id="hoteles" class="tex-center">
+        <div class="card-group">
+            <div class="card m-5 justify-content-center align-items-center">
+              <img src="/img/hotel cancun.jpeg" class="card-img-top img-fluid" alt="producto 1">
+              <div class="card-body">
+                <h5 class="card-title" id="">Hotel En Cancun</h5>
+                <p class="card-text">Disfruta de tu hospedaje en el Lujury, el mejor hotel de cancun durante 3 dias, 2 noches.</p>
+                <p class="card-text" id="precio"><small class="text-body-secondary">$500000</small></p>
+                <button class="btn btn-primary" onclick="agregarAlCarrito('Hotel en Cancun', 500000)">Agregar al Carrito</button>
+              </div>
+            </div>
+            <div class="card m-5 justify-content-center align-items-center">
+              <img src="/img/hotel san andres.jpeg" class="card-img-top img-fluid" alt="producto 2">
+              <div class="card-body">
+                <h5 class="card-title" id="">Hotel En San Andres</h5>
+                <p class="card-text">Disfrutaras de un hotel de lujo en San Andres durante 5 dias, 4 noches.</p>
+                <p class="card-text "><small class="text-body-secondary">$350000</small></p>
+                <button class="btn btn-primary" onclick="agregarAlCarrito('Hotel en San Andres', 350000)">Agregar al Carrito</button>
+              </div>
+            </div>
+            <div class="card m-5 justify-content-center align-items-center">
+              <img src="/img/hotel eje cafetero.jpeg" class="card-img-top img-fluid" alt="producto 3">
+              <div class="card-body">
+                <h5 class="card-title" id="">Hotel En el Eje Cafetero</h5>
+                <p class="card-text">Si del clima quieres disfrutar el hotel el Bernabeu es el mejor lugar para hospedarte si gustas ampliar tus pasadias.</p>
+                <p class="card-text"><small class="text-body-secondary">$120000</small></p>
+                <button class="btn btn-primary" onclick="agregarAlCarrito('Hotel en el Eje Cafetero', 120000)">Agregar al Carrito</button>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <section id="vuelos" class="tex-center">
+        <div class="card-group">
+            <!-- Primera tarjeta: Vuelo Vip Cancun -->
+            <div class="card m-5 justify-content-center align-items-center">
+                <img src="/img/volaris-mexico.webp" class="card-img-top img-fluid" alt="producto 1">
+                <div class="card-body">
+                    <h5 class="card-title">Vuelos</h5>
+                    <p class="card-text">Escoge tus vuelos a todos los destinos</p>
+                    <p class="card-text"><small class="text-body-secondary">$800,000</small></p>
+                    <!-- Formulario de selección de opciones -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="tipo-vuelo" class="form-label">Tipo de vuelo</label>
+                            <select class="form-select" id="tipo-vuelo">
+                                <option value="ida-vuelta">Ida y vuelta</option>
+                                <option value="solo-ida">Solo ida</option>
+                                <option value="multiples-destinos">Múltiples destinos</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="aeropuerto-origen" class="form-label">Aeropuerto de origen</label>
+                            <input type="text" class="form-control" id="aeropuerto-origen" placeholder="Ej: Bogotá">
+                        </div>
+                        <div class="mb-3">
+                            <label for="aeropuerto-destino" class="form-label">Aeropuerto de destino</label>
+                            <input type="text" class="form-control" id="aeropuerto-destino" placeholder="Ej: Cancún">
+                        </div>
+                        <div class="mb-3">
+                            <label for="fecha-ida" class="form-label">Fecha de ida</label>
+                            <input type="date" class="form-control" id="fecha-ida">
+                        </div>
+                        <div class="mb-3">
+                            <label for="fecha-vuelta" class="form-label">Fecha de vuelta</label>
+                            <input type="date" class="form-control" id="fecha-vuelta">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cantidad-personas" class="form-label">Cantidad de personas</label>
+                            <input type="number" class="form-control" id="cantidad-personas" min="1" value="1">
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="agregarAlCarrito('Paquete Cancún', 190000)">Agregar al Carrito</button>
+                    </form>
+                </div>
+            </div>
+            
+    
+            <!-- Repite el mismo bloque de código para las otras tarjetas: Vuelo San Andres Island y Plan Eje Cafetero -->
+        </div>
+    </section>
+    
+
+      <section class="container-fluid">
+        <h2 class="mt-5" id="carrito-items">PAQUETE ELEGIDO</h2>
+        <div id="carrito-items" class="cart-items">
+            <p>Aún no has agregado productos al carrito. Si deseas contactarnos para mas informacion clickea en el boton de abajo.</p>
+        </div>
+        <a class="icon-link icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" href="proyectofinallenguajes.html">
+          <svg class="bi" aria-hidden="true"><use xlink:href="proyectofinallenguajes.html"></use></svg>
+          <button class="btn btn-primary">Volver al inicio</button> 
+        </a>
+        <h3>Total: $<span id="total">0.00</span></h3>
+        
+      </section>
+      
+
+    <script src="proyectofinallenguajes.js"></script>
+</body>
+</html>
